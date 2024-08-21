@@ -4,6 +4,7 @@ Status do projeto:
 Em desenvolvimento ⏳
 
 Tecnologias que serão aplicadas:
+
 1 - Integração de funções para os clientes utilizarem o sistema.
 
 3 - Criação de perfil para os clientes.

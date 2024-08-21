@@ -5,10 +5,15 @@ Em desenvolvimento ⏳
 
 Tecnologias que serão aplicadas:
 1 - Integração de funções para os clientes utilizarem o sistema.
+
 3 - Criação de perfil para os clientes.
+
 4 - Sistema de fidelidade com descontos.
+
 5 - Sistema de backup na nuvem.
+
 6 – Linguagem Java,, Javascript, CSS, HTML
+
 7 - banco de dados baseado em MySQL
 
 Time de desenvolvedores:

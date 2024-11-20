@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacinto Padaria</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <!-- Ícones de redirecionamento -->
+        <a class="nav-link" href="vendas.html" rel="internal">
+          Vendas
+        </a>
+        <a class="nav-link" href="estoque.html" rel="internal">
+          Estoque
+        </a>
+        <a class="nav-link" href="login.html" rel="internal">
+          Sair da conta
+        </a>
+      </div>
+    </nav>
+
+  </header>
+  <main>
+    <div class="container mt-5">
+      <h2 class="text-center">Estoque</h2>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Nome do produto" aria-describedby="button-addon1">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon1">Buscar</button>
+        </div>
+      </div>
+
+
+      <div class="text-center">
+        <table class="table table-striped table-dark">
+          <thead id="produtosTableHead">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">NOME</th>
+              <th scope="col">DESCRIÇÃO</th>
+              <th scope="col">QUANTIDADE</th>
+              <td scope="col">VALIDADE</td>
+              <th scope="col">VALOR(1)</th>
+            </tr>
+          </thead>
+          <tbody id="produtosTableBody">
+            <tr scope="row">
+              <td>1</td>
+              <td>Produto teste</td>
+              <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+              <td>10</td>
+              <td>30/12/2024</td>
+              <td>5</td>
+            </tr>
+            <tr scope="row">
+              <td>2</td>
+              <td>Produto teste</td>
+              <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+              <td>10</td>
+              <td>30/12/2024</td>
+              <td>5</td>
+            </tr>
+            <tr scope="row">
+              <td>3</td>
+              <td>Produto teste</td>
+              <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+              <td>10</td>
+              <td>30/12/2024</td>
+              <td>5</td>
+            </tr>
+            <tr scope="row">
+              <td>4</td>
+              <td>Produto teste</td>
+              <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+              <td>10</td>
+              <td>30/12/2024</td>
+              <td>5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class=" mb-5 row">
+        <button class="btn btn-outline-secondary" data-bs-toggle="collapse"  href="#cadastroForm" type="submit">Cadastrar novo produto</button>
+      </div>
+
+      <div class="container mt-5 collapse" id="cadastroForm">
+        <h1 class="text-center mb-4">Cadastro de Produtos</h1>
+        <form id="produtoForm" action="/cadastrar-produto" method="post" novalidate>
+          <!-- Nome do produto -->
+          <div class="mb-3">
+              <label for="nome" class="form-label">Nome do Produto</label>
+              <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do produto" required>
+              <div class="invalid-feedback">Por favor, insira o nome do produto.</div>
+          </div>
+          
+          <!-- Descrição do produto -->
+          <div class="mb-3">
+              <label for="descricao" class="form-label">Descrição do Produto</label>
+              <textarea class="form-control" id="descricao" name="descricao" rows="3" placeholder="Digite a descrição do produto" required></textarea>
+              <div class="invalid-feedback">A descrição do produto é obrigatória.</div>
+          </div>
+          
+          <!-- Preço -->
+          <div class="mb-3">
+              <label for="preco" class="form-label">Preço (R$)</label>
+              <input type="number" class="form-control" id="preco" name="preco" placeholder="Digite o preço" step="0.01" min="0" required>
+              <div class="invalid-feedback">O preço deve ser um valor maior ou igual a 0,01.</div>
+          </div>
+          
+          <!-- Quantidade -->
+          <div class="mb-3">
+              <label for="quantidade" class="form-label">Quantidade</label>
+              <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Digite a quantidade" min="1" required>
+              <div class="invalid-feedback">A quantidade deve ser no mínimo 1.</div>
+          </div>
+          
+          <!-- Validade -->
+          <div class="mb-3">
+              <label for="validade" class="form-label">Data de Validade</label>
+              <input type="date" class="form-control" id="validade" name="validade" required>
+              <div class="invalid-feedback">A data de validade é obrigatória.</div>
+          </div>
+          
+          <!-- Botão de envio -->
+          <button type="submit" class="btn btn-primary w-100">Cadastrar Produto</button>
+      </form>
+      </div>
+    </div>
+
+
+
+    </div>
+  </main>
+
+  <footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <div class="container pt-4">
+
+
+     
+      <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="https://jacinto.goomer.app/menu?fbclid=PAZXh0bgNhZW0CMTEAAabYMF-LL9DkLDcxd19GD9h-8Rn5pK-W7YLBSnl1E80m_g-LU1gnNR1Q8qQ_aem_P43pgbt3UUatS908ddrI7g"
+        target="_blank" rel="noopener noreferrer" role="button" data-mdb-ripple-color="dark"><i
+          class="fab fa-google"></i></a>
+
+      <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/jacintoartesanal/"
+        target="_blank" rel="noopener noreferrer" role="button" data-mdb-ripple-color="dark"><i
+          class="fab fa-instagram"></i></a>
+
+    </div>
+
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Copyright: Jacinto Padaria
+    </div>
+  </footer>
+
+  <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="../js/cadastroScript.js"></script>
+</body>
+
+</html>

@@ -29,6 +29,8 @@ Requisitos funcionais:
 
 3 - Controle de estoque: O sistema deve manter o controle do estoque de produtos da padaria, registrando as quantidades disponíveis e atualizando-as conforme são vendidas.
 
+4 – Sistema de Autenticação: Permitir que os funcionários façam login no sistema com credenciais únicas.
+
 Requisitos não funcionais:
 
 1 - O sistema deve ser capaz de fazer um backup regularmente (1 vez por dia) dos dados.
@@ -38,3 +40,5 @@ Requisitos não funcionais:
 3 - O software deve ser desenvolvido seguindo um código limpo e otimizado para garantir agilidade e otimização.
 
 4 - Garantir que o sistema tenha uma resposta rápida e eficiente (sem comprometer sua integridade), mesmo em momentos de alta demanda, permitindo que os funcionários acessem as informações e executem suas tarefas sem atrasos significativos.
+
+5 – Sistema de Autenticação: Permitir que os funcionários façam login no sistema com credenciais únicas.

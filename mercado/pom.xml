@@ -13,6 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mercado</name>
 	<description>Demo project for Spring Boot</description>
+        <packaging>war</packaging>
 	<url/>
 	<licenses>
 		<license/>
@@ -79,6 +80,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+                <finalName>${artifactId}</finalName>
 	</build>
 
 </project>

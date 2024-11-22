@@ -17,16 +17,10 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "Login")
 public class LoginEntity {
-
+   
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private String username;
 
-    @NotBlank
-    @NotNull
-    private String user;
+    private String password;
 
-    @NotBlank
-    @NotNull
-    private String senha;
 }

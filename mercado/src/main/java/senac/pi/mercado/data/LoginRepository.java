@@ -9,15 +9,8 @@ import senac.pi.mercado.model.LoginEntity;
 @Repository
 public interface LoginRepository extends JpaRepository<LoginEntity, Integer>{
     
-    LoginEntity findByUser(String user);
-
-    List<LoginEntity> findByUserStartingWith(String user);
-
-    List<LoginEntity> findByUserEndingWith(String user);
-
-    List<LoginEntity> findByUserContaining(String user);
-
-    List<LoginEntity> findByOrderByUserAsc();
-
-    List<LoginEntity> findByOrderByUserDesc();
+    
+    boolean existsByUsernameAndPassword(String username, String password);
+    
+    List<LoginEntity> findByUsernameEndingWith(String suffix);
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Incluindo o CSS do Bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="text-center">Login</h2>
+                <form action="estoque.html" id="loginForm" onsubmit="return validateForm()">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Usuário</label>
+                        <input type="text" class="form-control" id="username" placeholder="Digite seu usuário">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                    <p id="error-message" class="error-message text-center mt-2"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+ <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+ <script src="../js/validaLoginScript.js"></script>
+</body>
+</html>

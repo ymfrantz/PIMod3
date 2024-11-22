@@ -61,9 +61,9 @@ $(document).ready(function () {
 
     }
 
-    function buscaPorNome(nome){
+    function buscaPorNome(nome) {
         $.ajax({
-            url: 'http://localhost:8080/produto/buscarPorNome/'+nome,
+            url: 'http://localhost:8080/produto/buscarPorNome/' + nome,
             method: 'GET',
             success: function (data) {
                 $('#produtosTableBody').empty();
@@ -95,15 +95,15 @@ $(document).ready(function () {
     }
 
 
-    $('#limpaBusca').on('click', function (vent){  
+    $('#limpaBusca').on('click', function (vent) {
         $('#inputBusca').val('');
         listarProdutos();
 
     });
 
-    $('#bucarProduto').on('click', function (vent){ 
-        let nomeBusca = $('#inputBusca').val().trim(); 
-        buscaPorNome(nomeBusca); 
+    $('#bucarProduto').on('click', function (vent) {
+        let nomeBusca = $('#inputBusca').val().trim();
+        buscaPorNome(nomeBusca);
     });
 
     $('#cadastrar').on('click', function (event) {
@@ -121,11 +121,11 @@ $(document).ready(function () {
         }
 
         let produto = {
-            nome: nome,
             descricao: descricao,
-            valor: parseFloat(valor),
+            nome: nome,
             quantidade: parseInt(quantidade),
-            validade: validade
+            validade: validade,
+            valor: parseFloat(valor)
         };
 
         criaProduto(produto);

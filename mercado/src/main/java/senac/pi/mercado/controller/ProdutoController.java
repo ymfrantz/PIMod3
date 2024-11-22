@@ -9,6 +9,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,11 +23,21 @@ import senac.pi.mercado.service.ProdutoService;
 
 @RestController // como um manipulador de solicitação HTTP
 // e permite que o Spring o reconheça como um serviço REST.
+@CrossOrigin(origins = "*") 
 @RequestMapping("/produto")
 public class ProdutoController {
     
     @Autowired
     ProdutoService produtoService;
+    
+    
+    @GetMapping("/buscarPorNome/{nome}")
+    public ResponseEntity<List> AllProdutoNome(@PathVariable String nome){
+        
+        List<ProdutoEntity> produtos = produtoService.AllProdutoNome(nome);
+        
+        return new ResponseEntity<>(produtos, HttpStatus.OK);
+    }
     
     @GetMapping("/listar")
     public ResponseEntity<List> getAllProdutos(){

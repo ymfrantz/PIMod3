@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package senac.pi.mercado.controller;
 
 
@@ -10,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +22,7 @@ import senac.pi.mercado.service.LoginService;
 
 @RestController // como um manipulador de solicitação HTTP
 // e permite que o Spring o reconheça como um serviço REST.
+@CrossOrigin(origins = "*") 
 @RequestMapping("/login")
 public class LoginController {
     

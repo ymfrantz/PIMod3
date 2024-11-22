@@ -41,8 +41,8 @@ public class ProdutoEntity {
 
     @Future(message = "O produto está com validade vencida.")
     @NotNull(message = "Preencha a data de validade.")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "dd-MM-yyyy")
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private LocalDate validade;
 
     @Positive

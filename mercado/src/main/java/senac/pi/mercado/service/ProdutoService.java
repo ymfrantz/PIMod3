@@ -14,6 +14,9 @@ public class ProdutoService {
     @Autowired
     ProdutoRepository produtoRepository;
     
+    
+    
+    
     public ProdutoEntity criarProduto(ProdutoEntity produto){
         
         produto.setId(null);
@@ -25,6 +28,12 @@ public class ProdutoService {
         
         return produtoRepository.findAll();   
     }
+    
+    public List<ProdutoEntity> AllProdutoNome(String nome){
+        
+        return produtoRepository.findByNomeContaining(nome); 
+    }
+    
     
     public ProdutoEntity getProdutoId(Integer id){
         
